@@ -14,14 +14,16 @@ Summary: The purpose of this package is to factor out logic and math common to I
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-rpf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-rpf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-rpf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-rpf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-rpf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-rpf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-rpf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-rpf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-rpf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-rpf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-rpf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-rpf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-rpf/badges/version.svg)](https://anaconda.org/conda-forge/r-rpf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-rpf/badges/downloads.svg)](https://anaconda.org/conda-forge/r-rpf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--rpf-green.svg)](https://anaconda.org/conda-forge/r-rpf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-rpf.svg)](https://anaconda.org/conda-forge/r-rpf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-rpf.svg)](https://anaconda.org/conda-forge/r-rpf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-rpf.svg)](https://anaconda.org/conda-forge/r-rpf) |
 
 Installing r-rpf
 ================

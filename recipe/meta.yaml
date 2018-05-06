@@ -1,4 +1,4 @@
-{% set version = '0.56.1' %}
+{% set version = "0.56.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rpf_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rpf/rpf_{{ version }}.tar.gz
-  sha256: ad482b58f0a8656948720f1e3a727fa3672e9bf7f0941e264229eafb5d69628c
+  sha256: d3773336feaddc4f1242ebeec6a9de0712325386fb2774d81c57ca62aad32e81
 
 build:
   number: 0
