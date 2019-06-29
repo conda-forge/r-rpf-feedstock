@@ -1,4 +1,4 @@
-{% set version = '0.59' %}
+{% set version = '0.62' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,31 +7,29 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: rpf_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/rpf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rpf/rpf_{{ version }}.tar.gz
-  sha256: e80c43421a2727758019c19da22ced8b5aa270f9cc9a68ebaef508faac5cf119
+  sha256: 71f2c4be743b04b694b6fca0bbb8fcbaac62385ddd4adaa54c7199632287f8ed
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
-  skip: true  # [win32]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-    - llvm-openmp                # [osx]
   host:
     - r-base
     - r-rcppeigen
@@ -41,7 +39,6 @@ requirements:
     - {{native}}gcc-libs         # [win]
     - r-rcppeigen
     - r-mvtnorm
-    - llvm-openmp                # [osx]
 
 test:
   commands:
@@ -60,9 +57,30 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Encoding: UTF-8
+# Package: rpf
+# Type: Package
+# Title: Response Probability Functions
+# Version: 0.62
+# Date: 2019-04-12
+# Authors@R: c(person("Joshua",family="Pritikin", email="jpritikin@pobox.com", role=c('cre','aut')), person("Jonathan",family="Weeks", email="weeksjp@gmail.com", role=c('ctb')), person("Li", family="Cai", role=c('ctb')), person("Carrie", family="Houts", role=c('ctb')), person("Phil", "Chalmers", email = "rphilip.chalmers@gmail.com", role = c("ctb")), person(c("Michael", "D."), "Hunter", role="ctb"), person(c("Carl", "F."), "Falk", email = "falkcarl@msu.edu", role = c("ctb")) )
+# Maintainer: Joshua Pritikin <jpritikin@pobox.com>
+# Description: The purpose of this package is to factor out logic and math common to Item Factor Analysis fitting, diagnostics, and analysis. It is envisioned as core support code suitable for more specialized IRT packages to build upon. Complete access to optimized C functions are made available with R_RegisterCCallable().
+# LazyData: yes
+# LazyDataCompression: bzip2
+# License: GPL (>= 3)
+# LinkingTo: RcppEigen
+# Suggests: testthat, roxygen2, ggplot2, reshape2, gridExtra, numDeriv, knitr, mirt
+# Imports: mvtnorm
+# Depends: methods, parallel, R (>= 2.14.0)
+# VignetteBuilder: knitr
+# Collate: 'init.R' 'classes.R' 'fit.R' 'drm.R' 'nrm.R' 'mcm.R' 'grm.R' 'LSAT.R' 'sample.R' 'dataframe.R' 'diagnose.R' 'science.R' 'kct.R' 'openmx.R' 'flexmirt.R' 'util.R' 'lmp.R'
+# URL: https://github.com/jpritikin/rpf
+# RoxygenNote: 6.1.1
+# NeedsCompilation: yes
+# Packaged: 2019-04-12 18:35:16 UTC; joshua
+# Author: Joshua Pritikin [cre, aut], Jonathan Weeks [ctb], Li Cai [ctb], Carrie Houts [ctb], Phil Chalmers [ctb], Michael D. Hunter [ctb], Carl F. Falk [ctb]
+# Repository: CRAN
+# Date/Publication: 2019-04-12 19:22:43 UTC
