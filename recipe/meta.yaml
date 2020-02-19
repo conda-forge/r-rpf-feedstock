@@ -32,13 +32,17 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - r-rcpp >=1.0.2
     - r-rcppeigen
     - r-mvtnorm
+    - r-lifecycle
   run:
     - r-base
+    - r-rcpp >=1.0.2
     - {{native}}gcc-libs         # [win]
     - r-rcppeigen
     - r-mvtnorm
+    - r-lifecycle
 
 test:
   commands:
