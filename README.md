@@ -3,7 +3,7 @@ About r-rpf
 
 Home: https://github.com/jpritikin/rpf
 
-Package license: GPL (>= 3)
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpf-feedstock/blob/master/LICENSE.txt)
 
