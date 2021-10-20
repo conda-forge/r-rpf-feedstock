@@ -1,4 +1,4 @@
-{% set version = "1.0.9" %}
+{% set version = "1.0.11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rpf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rpf/rpf_{{ version }}.tar.gz
-  sha256: 4ca77e571acf248d3c36f2017b8b1f075259d83998b6de5ad14731d4c8a77a70
+  sha256: e1fd670ae7c3e947db08ce50d6b16ce1b3b8f63a9016b03baba760aee78921fb
 
 build:
   merge_build_host: true  # [win]
