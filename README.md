@@ -3,6 +3,7 @@ About r-rpf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpf-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rpf
 -----------
 
@@ -11,6 +12,7 @@ Home: https://github.com/jpritikin/rpf
 Package license: GPL-3.0-or-later
 
 Summary: The purpose of this package is to factor out logic and math common to Item Factor Analysis fitting, diagnostics, and analysis. It is envisioned as core support code suitable for more specialized IRT packages to build upon. Complete access to optimized C functions are made available with R_RegisterCCallable().
+
 About r-rpf
 -----------
 
